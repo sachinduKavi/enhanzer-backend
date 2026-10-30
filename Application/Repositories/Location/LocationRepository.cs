@@ -18,4 +18,6 @@ public class LocationRepository(DatabaseContext context): ILocationRepository
 
     await context.AddAsync(location);
   }
+
+  public async Task SaveChangesAsync() => await context.SaveChangesAsync();
 }

@@ -10,12 +10,13 @@ Env.TraversePath().Load();
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 
 builder.Services.AddDbContext<DatabaseContext>(options => options.UseMySQL(builder.Configuration.GetValue<string>("DATBASE_URL") ?? throw new InvalidOperationException("Database URL is not configured.")));
 builder.Services.AddAllServices();
 builder.Services.AddAutoMapper(cfg => {}, AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddCors(options => options.AddPolicy("Frontend", policy =>
+  policy.WithOrigins("http://localhost:4200").AllowAnyHeader().AllowAnyMethod()));
 
 var app = builder.Build();
 
@@ -24,6 +25,8 @@ app.UseMiddleware<ErrorHandlingMiddleware>();
 // Configure the HTTP request pipeline.
 
 app.UseHttpsRedirection();
+
+app.UseCors("Frontend");
 
 app.UseAuthorization();
 

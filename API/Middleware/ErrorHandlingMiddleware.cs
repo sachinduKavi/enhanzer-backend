@@ -15,6 +15,7 @@ public class ErrorHandlingMiddleware(RequestDelegate next)
     {
       (int statusCode, string message, object? data) = MapException(ex);
       Console.Error.WriteLine($"Error: {message} StatusCode: {statusCode}");
+      context.Response.StatusCode = statusCode;
       await context.Response.WriteAsJsonAsync<HttpResponse>(new HttpResponse
       {
         Success = false,

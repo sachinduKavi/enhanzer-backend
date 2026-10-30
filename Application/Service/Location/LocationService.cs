@@ -13,5 +13,7 @@ public class LocationService(ILocationRepository repository, IMapper _mapper): I
     {
       await repository.AddCheckLocationAsync(_mapper.Map<LocationDetails>(location));
     }
+
+    await repository.SaveChangesAsync();
   }
 }
