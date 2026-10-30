@@ -1,8 +1,28 @@
 {
   "version": 2,
-  "dgSpecHash": "ecGFQr/PR3Y=",
+  "dgSpecHash": "khhuJZYAMuQ=",
   "success": true,
   "projectFilePath": "E:\\Projects\\Interview Aassignment\\Enhanzzer\\enhanzer-backend\\API\\API.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "C:\\Users\\Sachindu Kavishka\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.0\\microsoft.entityframeworkcore.9.0.0.nupkg.sha512",
+    "C:\\Users\\Sachindu Kavishka\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.0\\microsoft.entityframeworkcore.abstractions.9.0.0.nupkg.sha512",
+    "C:\\Users\\Sachindu Kavishka\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\9.0.0\\microsoft.entityframeworkcore.analyzers.9.0.0.nupkg.sha512",
+    "C:\\Users\\Sachindu Kavishka\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\9.0.0\\microsoft.entityframeworkcore.relational.9.0.0.nupkg.sha512",
+    "C:\\Users\\Sachindu Kavishka\\.nuget\\packages\\mysqlconnector\\2.4.0\\mysqlconnector.2.4.0.nupkg.sha512",
+    "C:\\Users\\Sachindu Kavishka\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\9.0.0\\pomelo.entityframeworkcore.mysql.9.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "message": "Package 'MySqlConnector' 2.4.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-473q-m89c-ghf8",
+      "projectPath": "E:\\Projects\\Interview Aassignment\\Enhanzzer\\enhanzer-backend\\API\\API.csproj",
+      "warningLevel": 1,
+      "filePath": "E:\\Projects\\Interview Aassignment\\Enhanzzer\\enhanzer-backend\\API\\API.csproj",
+      "libraryId": "MySqlConnector",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
 }
