@@ -12,9 +12,14 @@ public class ErrorHandlingMiddleware(RequestDelegate next)
       await _next(context);
     } catch (Exception ex)
     {
-      context.Response.StatusCode = 500;
+      (int statusCode, string message, object? data) = MapException(ex);
       await context.Response.WriteAsync("An unexpected error occurred.");
     }
   }
+
+  private static (int StatusCode, string Message, object? Data) MapException(Exception exception) => exception switch
+  {
+      _ => (500, "An unexpected error occurred.", null)
+  };
 
 }
