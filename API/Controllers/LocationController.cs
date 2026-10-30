@@ -1,3 +1,4 @@
+using Enhanzer.Application.Service.Location;
 using Enhanzer.Core.Dtos.Location;
 using Microsoft.AspNetCore.Mvc;
 using HttpResponse = Enhanzer.Core.Dtos.Response.HttpResponse;
@@ -7,11 +8,12 @@ namespace Enhanzer.API.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class LocationController: ControllerBase
+public class LocationController(ILocationService service): ControllerBase
 {
   public async Task<IActionResult> CreateLocations([FromBody] CreateLocationsRequestDto createLocationsRequestDto)
   {
     Console.WriteLine($"Received {createLocationsRequestDto.Locations.Length} locations to create.");
+    await service.CreateLocationAsync(createLocationsRequestDto);
     return Ok(new HttpResponse
     {
       Data = null,
