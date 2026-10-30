@@ -20,6 +20,7 @@ MySqlConnectionStringBuilder DatabaseConne = new()
 };
 builder.Services.AddDbContext<DatabaseContext>(options => options.UseMySql(DatabaseConne.ConnectionString, ServerVersion.AutoDetect(DatabaseConne.ConnectionString)));
 builder.Services.AddAllServices();
+builder.Services.AddAutoMapper(cfg => {}, AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 

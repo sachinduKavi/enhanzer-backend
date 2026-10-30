@@ -5,7 +5,7 @@ namespace Enhanzer.Application.Repositories.Location;
 
 public class LocationRepository(DbContext context): ILocationRespository
 {
-  public async Task AddLocationAsync(LocationDetails location)
+  public async Task AddCheckLocationAsync(LocationDetails location)
   {
     var exists = await context.Set<LocationDetails>()
       .AnyAsync(l => l.LocationCode == location.LocationCode);
