@@ -2,6 +2,8 @@ using Enhanzer.Infrastructure.Database;
 using Microsoft.EntityFrameworkCore;
 using MySqlConnector;
 
+Env
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

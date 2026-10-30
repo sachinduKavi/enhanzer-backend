@@ -1,0 +1,16 @@
+E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\Application\bin\Debug\net10.0\Application.deps.json
+E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\Application\bin\Debug\net10.0\Application.dll
+E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\Application\bin\Debug\net10.0\Application.pdb
+E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\Application\bin\Debug\net10.0\Core.dll
+E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\Application\bin\Debug\net10.0\Core.pdb
+E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\Application\obj\Debug\net10.0\Application.csproj.AssemblyReference.cache
+E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\Application\obj\Debug\net10.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\Application\obj\Debug\net10.0\Application.AssemblyInfoInputs.cache
+E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\Application\obj\Debug\net10.0\Application.AssemblyInfo.cs
+E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\Application\obj\Debug\net10.0\Application.csproj.CoreCompileInputs.cache
+E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\Application\obj\Debug\net10.0\Application.sourcelink.json
+E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\Application\obj\Debug\net10.0\Applicat.44B5EDA2.Up2Date
+E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\Application\obj\Debug\net10.0\Application.dll
+E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\Application\obj\Debug\net10.0\refint\Application.dll
+E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\Application\obj\Debug\net10.0\Application.pdb
+E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\Application\obj\Debug\net10.0\ref\Application.dll
