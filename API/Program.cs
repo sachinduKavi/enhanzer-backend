@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using MySqlConnector;
 using DotNetEnv;
 using Enhanzer.API.Middleware;
+using Enhanzer.API.Extensions;
 
 
 Env.TraversePath().Load();
@@ -18,7 +19,7 @@ MySqlConnectionStringBuilder DatabaseConne = new()
   ConnectionString = builder.Configuration.GetValue<string>("DATBASE_URL")
 };
 builder.Services.AddDbContext<DatabaseContext>(options => options.UseMySql(DatabaseConne.ConnectionString, ServerVersion.AutoDetect(DatabaseConne.ConnectionString)));
-
+builder.Services.AddAllServices();
 
 var app = builder.Build();
 
