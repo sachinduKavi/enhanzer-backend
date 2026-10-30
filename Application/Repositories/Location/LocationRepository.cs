@@ -1,9 +1,10 @@
 using Enhanzer.Core.Entities;
+using Enhanzer.Infrastructure.Database;
 using Microsoft.EntityFrameworkCore;
 
 namespace Enhanzer.Application.Repositories.Location;
 
-public class LocationRepository(DbContext context): ILocationRepository
+public class LocationRepository(DatabaseContext context): ILocationRepository
 {
   public async Task AddCheckLocationAsync(LocationDetails location)
   {

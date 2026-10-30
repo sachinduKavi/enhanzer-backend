@@ -1,6 +1,5 @@
 using Enhanzer.Infrastructure.Database;
 using Microsoft.EntityFrameworkCore;
-using MySqlConnector;
 using DotNetEnv;
 using Enhanzer.API.Middleware;
 using Enhanzer.API.Extensions;
@@ -14,11 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-MySqlConnectionStringBuilder DatabaseConne = new()
-{
-  ConnectionString = builder.Configuration.GetValue<string>("DATBASE_URL")
-};
-builder.Services.AddDbContext<DatabaseContext>(options => options.UseMySql(DatabaseConne.ConnectionString, ServerVersion.AutoDetect(DatabaseConne.ConnectionString)));
+builder.Services.AddDbContext<DatabaseContext>(options => options.UseMySQL(builder.Configuration.GetValue<string>("DATBASE_URL") ?? throw new InvalidOperationException("Database URL is not configured.")));
 builder.Services.AddAllServices();
 builder.Services.AddAutoMapper(cfg => {}, AppDomain.CurrentDomain.GetAssemblies());
 
