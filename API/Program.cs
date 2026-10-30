@@ -1,8 +1,10 @@
 using Enhanzer.Infrastructure.Database;
 using Microsoft.EntityFrameworkCore;
 using MySqlConnector;
+using DotNetEnv;
 
-Env
+
+Env.TraversePath().Load();
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-MySqlConnectionStringBuilder DatabaseConne = new MySqlConnectionStringBuilder
+MySqlConnectionStringBuilder DatabaseConne = new()
 {
   ConnectionString = builder.Configuration.GetValue<string>("DATBASE_URL")
 };
