@@ -1,3 +1,4 @@
+using HttpResponse = Enhanzer.Core.Dtos.Response.HttpResponse;
 namespace Enhanzer.API.Middleware;
 
 public class ErrorHandlingMiddleware(RequestDelegate next)
@@ -13,12 +14,22 @@ public class ErrorHandlingMiddleware(RequestDelegate next)
     } catch (Exception ex)
     {
       (int statusCode, string message, object? data) = MapException(ex);
-      await context.Response.WriteAsync("An unexpected error occurred.");
+      Console.Error.WriteLine($"Error: {message} StatusCode: {statusCode}");
+      await context.Response.WriteAsJsonAsync<HttpResponse>(new HttpResponse
+      {
+        Success = false,
+        Message = message,
+        Data = null
+      });
     }
   }
 
   private static (int StatusCode, string Message, object? Data) MapException(Exception exception) => exception switch
   {
+      KeyNotFoundException => (404, exception.Message, null),
+      ArgumentException => (400, exception.Message, null),
+      UnauthorizedAccessException => (401, exception.Message, null),
+      InvalidOperationException => (400, exception.Message, null),
       _ => (500, "An unexpected error occurred.", null)
   };
 
