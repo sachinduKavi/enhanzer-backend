@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Enhanzer.Application.Repositories.Location;
 
-public class LocationRepository(DbContext context): ILocationRespository
+public class LocationRepository(DbContext context): ILocationRepository
 {
   public async Task AddCheckLocationAsync(LocationDetails location)
   {

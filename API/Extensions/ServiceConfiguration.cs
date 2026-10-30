@@ -1,4 +1,5 @@
 using Enhanzer.Application.Repositories.Location;
+using Enhanzer.Application.Service.Location;
 
 namespace Enhanzer.API.Extensions;
 
@@ -8,12 +9,13 @@ public static class ServiceConfiguration
   {
     service.AddRepositories();
 
+    service.AddScoped<ILocationService, LocationService>();
     
     return service;
   }
 
   private static void AddRepositories(this IServiceCollection service)
   {
-    service.AddScoped<ILocationRespository, LocationRepository>();
+    service.AddScoped<ILocationRepository, LocationRepository>();
   }
 }

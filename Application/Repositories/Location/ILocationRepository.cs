@@ -2,7 +2,7 @@ using Enhanzer.Core.Entities;
 
 namespace Enhanzer.Application.Repositories.Location;
 
-public interface ILocationRespository
+public interface ILocationRepository
 {
   Task AddCheckLocationAsync(LocationDetails location);
 }
