@@ -1,3 +1,13 @@
 .env
 
 API/bin/*
+API/obj/*
+
+Application/bin/*
+Application/obj/*
+
+Infrastructure/bin/*
+Infrastructure/obj/*
+
+Core/bin/*
+Core/obj/*
