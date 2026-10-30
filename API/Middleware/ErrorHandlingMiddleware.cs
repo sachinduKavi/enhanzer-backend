@@ -31,6 +31,5 @@ public class ErrorHandlingMiddleware(RequestDelegate next)
       UnauthorizedAccessException => (401, exception.Message, null),
       InvalidOperationException => (400, exception.Message, null),
       _ => (500, "An unexpected error occurred.", null)
-  };
-
+  };  
 }

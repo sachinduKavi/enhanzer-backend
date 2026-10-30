@@ -2,6 +2,7 @@ using Enhanzer.Infrastructure.Database;
 using Microsoft.EntityFrameworkCore;
 using MySqlConnector;
 using DotNetEnv;
+using Enhanzer.API.Middleware;
 
 
 Env.TraversePath().Load();
@@ -20,6 +21,8 @@ builder.Services.AddDbContext<DatabaseContext>(options => options.UseMySql(Datab
 
 
 var app = builder.Build();
+
+app.UseMiddleware<ErrorHandlingMiddleware>();
 
 // Configure the HTTP request pipeline.
 
