@@ -21,10 +21,9 @@ E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\API\obj\Debug\net10
 E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\API\obj\Debug\net10.0\staticwebassets.development.json
 E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\API\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\API\obj\Debug\net10.0\swae.build.ex.cache
-E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\API\obj\Debug\net10.0\API.dll
 E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\API\obj\Debug\net10.0\refint\API.dll
 E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\API\obj\Debug\net10.0\API.pdb
 E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\API\obj\Debug\net10.0\API.genruntimeconfig.cache
 E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\API\obj\Debug\net10.0\ref\API.dll
-E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\API\obj\Debug\net10.0\API.csproj.Up2Date
+E:\Projects\Interview Aassignment\Enhanzzer\enhanzer-backend\API\obj\Debug\net10.0\API.sourcelink.json

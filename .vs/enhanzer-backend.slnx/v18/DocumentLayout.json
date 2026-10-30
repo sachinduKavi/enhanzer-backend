@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "E:\\Projects\\Interview Aassignment\\Enhanzzer\\enhanzer-backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{976C5C64-9567-4A45-BB1C-5333DF665F83}|Infrastructure\\Infrastructure.csproj|e:\\projects\\interview aassignment\\enhanzzer\\enhanzer-backend\\infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{976C5C64-9567-4A45-BB1C-5333DF665F83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F94CE94-73C9-4D21-A3C7-1DBB911B190C}|Core\\Core.csproj|e:\\projects\\interview aassignment\\enhanzzer\\enhanzer-backend\\core\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F94CE94-73C9-4D21-A3C7-1DBB911B190C}|Core\\Core.csproj|solutionrelative:core\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EAC0E558-DCBD-4DEE-AE41-4932D2301FB1}|Application\\Application.csproj|e:\\projects\\interview aassignment\\enhanzzer\\enhanzer-backend\\application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EAC0E558-DCBD-4DEE-AE41-4932D2301FB1}|Application\\Application.csproj|solutionrelative:application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|e:\\projects\\interview aassignment\\enhanzzer\\enhanzer-backend\\api\\api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "E:\\Projects\\Interview Aassignment\\Enhanzzer\\enhanzer-backend\\Infrastructure\\Class1.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Class1.cs",
-              "ToolTip": "E:\\Projects\\Interview Aassignment\\Enhanzzer\\enhanzer-backend\\Infrastructure\\Class1.cs",
-              "RelativeToolTip": "Infrastructure\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T14:59:55.515Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "E:\\Projects\\Interview Aassignment\\Enhanzzer\\enhanzer-backend\\Core\\Class1.cs",
-              "RelativeDocumentMoniker": "Core\\Class1.cs",
-              "ToolTip": "E:\\Projects\\Interview Aassignment\\Enhanzzer\\enhanzer-backend\\Core\\Class1.cs",
-              "RelativeToolTip": "Core\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T14:59:27.75Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "E:\\Projects\\Interview Aassignment\\Enhanzzer\\enhanzer-backend\\Application\\Class1.cs",
-              "RelativeDocumentMoniker": "Application\\Class1.cs",
-              "ToolTip": "E:\\Projects\\Interview Aassignment\\Enhanzzer\\enhanzer-backend\\Application\\Class1.cs",
-              "RelativeToolTip": "Application\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T14:59:08.357Z",
+              "Title": "API",
+              "DocumentMoniker": "E:\\Projects\\Interview Aassignment\\Enhanzzer\\enhanzer-backend\\API\\API.csproj",
+              "RelativeDocumentMoniker": "API\\API.csproj",
+              "ToolTip": "E:\\Projects\\Interview Aassignment\\Enhanzzer\\enhanzer-backend\\API\\API.csproj",
+              "RelativeToolTip": "API\\API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-10-30T15:05:54.83Z",
               "EditorCaption": ""
             }
           ]
