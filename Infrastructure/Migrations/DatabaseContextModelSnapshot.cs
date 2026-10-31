@@ -3,6 +3,7 @@ using System;
 using Enhanzer.Infrastructure.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -17,7 +18,9 @@ namespace Infrastructure.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "10.0.14")
-                .HasAnnotation("Relational:MaxIdentifierLength", 64);
+                .HasAnnotation("Relational:MaxIdentifierLength", 128);
+
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("Enhanzer.Core.Entities.LocationDetails", b =>
                 {
@@ -26,11 +29,11 @@ namespace Infrastructure.Migrations
                         .HasColumnName("Location_Code");
 
                     b.Property<string>("Address")
-                        .HasColumnType("text")
+                        .HasColumnType("nvarchar(max)")
                         .HasColumnName("Address");
 
                     b.Property<string>("LocationName")
-                        .HasColumnType("varchar(100)")
+                        .HasColumnType("nvarchar(100)")
                         .HasColumnName("Location_Name");
 
                     b.Property<string>("Phone")
@@ -38,7 +41,7 @@ namespace Infrastructure.Migrations
                         .HasColumnName("Phone");
 
                     b.Property<bool?>("Status")
-                        .HasColumnType("tinyint(1)")
+                        .HasColumnType("bit")
                         .HasColumnName("Status");
 
                     b.Property<int?>("StockHandle")
@@ -57,8 +60,10 @@ namespace Infrastructure.Migrations
                         .HasColumnType("int")
                         .HasColumnName("Id");
 
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime(6)")
+                        .HasColumnType("datetime2")
                         .HasColumnName("Created_At");
 
                     b.Property<string>("CreatedBy")
@@ -85,6 +90,8 @@ namespace Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasColumnName("Id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("BatchCode")
                         .IsRequired()
