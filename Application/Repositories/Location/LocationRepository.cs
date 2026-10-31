@@ -12,6 +12,12 @@ public class LocationRepository(DatabaseContext context): ILocationRepository
       .OrderBy(l => l.LocationName)
       .ToListAsync();
 
+  public async Task<List<string>> GetExistingCodesAsync(IReadOnlyCollection<string> codes) =>
+    await context.Set<LocationDetails>()
+      .Where(l => codes.Contains(l.LocationCode))
+      .Select(l => l.LocationCode)
+      .ToListAsync();
+
   public async Task AddCheckLocationAsync(LocationDetails location)
   {
     var exists = await context.Set<LocationDetails>()
