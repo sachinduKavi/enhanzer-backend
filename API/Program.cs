@@ -16,7 +16,7 @@ builder.Services.AddDbContext<DatabaseContext>(options => options.UseMySQL(build
 builder.Services.AddAllServices();
 builder.Services.AddAutoMapper(cfg => {}, AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddCors(options => options.AddPolicy("Frontend", policy =>
-  policy.WithOrigins("http://localhost:4200").AllowAnyHeader().AllowAnyMethod()));
+  policy.WithOrigins(builder.Configuration.GetValue<string>("ORIGIN_URL") ?? throw new InvalidOperationException("Origin URL is not configured.")).AllowAnyHeader().AllowAnyMethod()));
 
 var app = builder.Build();
 
