@@ -10,18 +10,18 @@ public class LocationDetails
   [Column("Location_Code", TypeName = "varchar(20)")]
   public string LocationCode { get; set; } = null!;
 
-  [Column("Location_Name", TypeName = "nvarchar(100)")]
+  [Column("Location_Name", TypeName = "varchar(100)")]
   public string? LocationName { get; set; }
 
   [Column("Stock_Handle", TypeName = "int")]
   public int? StockHandle { get; set; }
   
-  [Column("Address", TypeName = "nvarchar(max)")]
+  [Column("Address", TypeName = "text")]
   public string? Address { get; set; }
 
   [Column("Phone", TypeName = "varchar(15)")]
   public string? Phone { get; set; }
 
-  [Column("Status", TypeName = "bit")]
+  [Column("Status", TypeName = "tinyint(1)")]
   public bool? Status { get; set; }
 }

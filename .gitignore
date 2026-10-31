@@ -1,13 +1,18 @@
+# Secrets (copy API/.env.example to API/.env)
 .env
 
-API/bin/*
-API/obj/*
+# Build and publish output
+bin/
+obj/
+publish/
 
-Application/bin/*
-Application/obj/*
+# Visual Studio, Rider and VS Code
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
 
-Infrastructure/bin/*
-Infrastructure/obj/*
-
-Core/bin/*
-Core/obj/*
+# OS files
+.DS_Store
+Thumbs.db

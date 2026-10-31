@@ -12,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers();
 
-builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(builder.Configuration.GetValue<string>("DATBASE_URL") ?? throw new InvalidOperationException("Database URL is not configured.")));
+builder.Services.AddDbContext<DatabaseContext>(options => options.UseMySQL(builder.Configuration.GetValue<string>("DATBASE_URL") ?? throw new InvalidOperationException("Database URL is not configured.")));
 builder.Services.AddAllServices();
 builder.Services.AddAutoMapper(cfg => {}, AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddCors(options => options.AddPolicy("Frontend", policy =>
