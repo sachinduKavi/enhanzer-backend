@@ -10,6 +10,17 @@ namespace Enhanzer.API.Controllers;
 [Route("[controller]")]
 public class LocationController(ILocationService service): ControllerBase
 {
+  [HttpGet]
+  public async Task<IActionResult> GetLocations()
+  {
+    return Ok(new HttpResponse
+    {
+      Data = await service.GetLocationsAsync(),
+      Success = true,
+      Message = "Locations retrieved successfully."
+    });
+  }
+
   [HttpPost]
   public async Task<IActionResult> CreateLocations([FromBody] CreateLocationsRequestDto createLocationsRequestDto)
   {

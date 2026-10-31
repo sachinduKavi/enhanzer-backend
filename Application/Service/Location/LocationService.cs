@@ -7,6 +7,9 @@ namespace Enhanzer.Application.Service.Location;
 
 public class LocationService(ILocationRepository repository, IMapper _mapper): ILocationService
 {
+  public async Task<List<LocationDto>> GetLocationsAsync() =>
+    _mapper.Map<List<LocationDto>>(await repository.GetLocationsAsync());
+
   public async Task CreateLocationAsync(CreateLocationsRequestDto createLocationsRequestDto)
   {
     foreach (var location in createLocationsRequestDto.Locations)

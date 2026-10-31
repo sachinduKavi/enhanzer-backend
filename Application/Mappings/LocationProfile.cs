@@ -9,5 +9,6 @@ public class LocationProfile: Profile
   public LocationProfile()
   {
     CreateMap<UserLocation, LocationDetails>();
+    CreateMap<LocationDetails, LocationDto>();
   }
 }

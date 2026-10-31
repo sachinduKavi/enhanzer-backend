@@ -6,6 +6,12 @@ namespace Enhanzer.Application.Repositories.Location;
 
 public class LocationRepository(DatabaseContext context): ILocationRepository
 {
+  public async Task<List<LocationDetails>> GetLocationsAsync() =>
+    await context.Set<LocationDetails>()
+      .AsNoTracking()
+      .OrderBy(l => l.LocationName)
+      .ToListAsync();
+
   public async Task AddCheckLocationAsync(LocationDetails location)
   {
     var exists = await context.Set<LocationDetails>()
