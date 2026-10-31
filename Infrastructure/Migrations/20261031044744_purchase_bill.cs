@@ -1,39 +1,24 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
+using MySql.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
 namespace Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class purchase_bill : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Location_Details",
-                columns: table => new
-                {
-                    Location_Code = table.Column<string>(type: "varchar(20)", nullable: false),
-                    Location_Name = table.Column<string>(type: "nvarchar(100)", nullable: true),
-                    Stock_Handle = table.Column<int>(type: "int", nullable: true),
-                    Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Phone = table.Column<string>(type: "varchar(15)", nullable: true),
-                    Status = table.Column<bool>(type: "bit", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Location_Details", x => x.Location_Code);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Purchase_Bill",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Created_At = table.Column<DateTime>(type: "datetime2", nullable: false),
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    Created_At = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     Created_By = table.Column<string>(type: "varchar(100)", nullable: false),
                     Total_Items = table.Column<int>(type: "int", nullable: false),
                     Total_Qty = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
@@ -41,14 +26,15 @@ namespace Infrastructure.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Purchase_Bill", x => x.Id);
-                });
+                })
+                .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateTable(
                 name: "Purchase_Bill_Item",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     Purchase_Bill_Id = table.Column<int>(type: "int", nullable: false),
                     Item_Name = table.Column<string>(type: "varchar(50)", nullable: false),
                     Batch_Code = table.Column<string>(type: "varchar(20)", nullable: false),
@@ -76,7 +62,8 @@ namespace Infrastructure.Migrations
                         principalTable: "Purchase_Bill",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                });
+                })
+                .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Purchase_Bill_Item_Batch_Code",
@@ -94,9 +81,6 @@ namespace Infrastructure.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Purchase_Bill_Item");
-
-            migrationBuilder.DropTable(
-                name: "Location_Details");
 
             migrationBuilder.DropTable(
                 name: "Purchase_Bill");
