@@ -1,5 +1,5 @@
 using Enhanzer.Application.Repositories.Location;
-using Enhanzer.Application.Repositories.PurchaseBill;
+using Enhanzer.Application.Repositories.PurchaseBillRepository;
 using Enhanzer.Application.Service.Location;
 using Enhanzer.Application.Service.PurchaseBill;
 

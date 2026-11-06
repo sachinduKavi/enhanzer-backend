@@ -1,5 +1,5 @@
 dev:
-	dotnet run --project API
+	dotnet watch run --project API
 
 build:
 	dotnet build --project API

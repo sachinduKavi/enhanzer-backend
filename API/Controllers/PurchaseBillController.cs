@@ -19,4 +19,16 @@ public class PurchaseBillController(IPurchaseBillService service): ControllerBas
       Message = "Purchase bill saved successfully."
     });
   }
+
+
+  [HttpGet]
+  public async Task<IActionResult> GetOrders()
+  {
+    return Ok(new HttpResponse
+    {
+      Data = await service.FetchPurchaseBills(),
+      Success = true,
+      Message = "Purchase bills retrieved successfully."
+    });
+  }
 }

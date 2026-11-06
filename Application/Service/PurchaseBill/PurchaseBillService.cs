@@ -1,6 +1,6 @@
 using AutoMapper;
 using Enhanzer.Application.Repositories.Location;
-using Enhanzer.Application.Repositories.PurchaseBill;
+using Enhanzer.Application.Repositories.PurchaseBillRepository;
 using Enhanzer.Core.Dtos.PurchaseBill;
 using Enhanzer.Core.Entities;
 
@@ -12,6 +12,12 @@ public class PurchaseBillService(
   IMapper _mapper): IPurchaseBillService
 {
   private static readonly string[] ItemNames = ["Mango", "Apple", "Banana", "Orange", "Grapes", "Kiwi", "Strawberry"];
+
+  public async Task<List<PurchaseOrderResponseDto>> FetchPurchaseBills()
+  {
+    var purchaseBills = await repository.GetPurchaseBillsAsync();
+    return _mapper.Map<List<PurchaseOrderResponseDto>>(purchaseBills);
+  }
 
   public async Task<PurchaseBillDto> CreatePurchaseBillAsync(CreatePurchaseBillRequestDto createPurchaseBillRequestDto)
   {
